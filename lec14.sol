@@ -1,24 +1,15 @@
-// SPDX-License-Identifier:GPL-30
-pragma solidity >= 0.7.0 < 0.9.0;
+// SPDX-License-Identifier: MIT
 
-contract Father {
-    event FatherName(string name);
-    function who() public virtual{
-        emit FatherName("KimDaeho");
-    }
-}
+pragma solidity >=0.7.0 <0.9.0;
 
-contract Mother {
-    event MotherName(string name);
-    function who() public virtual{
-        emit MotherName("leeSol");
-    }
-}
+contract Lecture14  {
+    event numberTracker(uint256 num, string str);
+    event numberTracker2(uint256 indexed num, string str);
 
-contract Son is Father{
-    event sonName(string name);
-    function who() public override{
-        super.who();
-        emit sonName("KimJin");
+    uint256 num =0;
+    function PushEvent(string memory _str) public {
+        emit numberTracker(num,_str);
+        emit numberTracker2(num,_str);
+        num ++;
     }
 }
