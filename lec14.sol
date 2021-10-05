@@ -2,7 +2,7 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
-contract Lecture14  {
+contract lec14  {
     event numberTracker(uint256 num, string str);
     event numberTracker2(uint256 indexed num, string str);
 
