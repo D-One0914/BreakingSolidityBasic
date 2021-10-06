@@ -23,11 +23,11 @@ contract lec20{
        return CharacterMapping[_key];
     }
     
-    function createChracterArray(uint256 _age,string memory _name,string memory _job )  public {
+    function createChracterArray(uint256 _age,string memory _name,string memory _job ) public {
        CharacterArray.push(Character(_age,_name,_job));
     }
     
     function getChracterArray(uint256 _index)  public view returns(Character memory){
-       return CharacterMapping[_index];
+       return CharacterArray[_index];
     }
 }
